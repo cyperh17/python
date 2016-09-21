@@ -5,6 +5,7 @@ import datetime
 
 class Person:
     len2 = 0
+    __private_prop = 0
 
 class Employee:
     def __init__(self, name, surname, pay):
