@@ -38,6 +38,34 @@
 #6
 #sentence = 'My name is {name} and I am {age} yeard old.'.format(name = 'Jann', age = 32)
 
-print(sentence)
+#print(sentence)
 
-#https://youtu.be/vTX3IwquFkc?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU&t=455
+#7
+# for i in range(1, 11):
+#     sentence = 'The value is {:03}'.format(i) #xxx number format
+#     print(sentence)
+
+#8
+# pi = 3.1459265
+
+# sentence = 'Pi is equals to {:.3f}'.format(pi)
+# print(sentence)
+
+#9
+# sentence = '1 MB is eqaul to {:,} bytes'.format(1000**2) #comma separated value
+# print(sentence)
+
+# sentence = '1 MB is eqaul to {:,.2f} bytes'.format(1000**2) #combining
+# print(sentence)
+
+
+#10
+#Dates
+import datetime
+d = datetime.datetime(2016, 9, 24, 12, 30, 45)
+
+#print(d)
+
+#sentence = '{:%B %d, %Y}'.format(d)
+sentence = '{0:%B %d, %Y} feel on a {0:%A} and was the {0:%j} day of the year'.format(d)
+print(sentence)
