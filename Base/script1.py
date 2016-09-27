@@ -1,6 +1,6 @@
-import random
-import sys
-import os
+# import random
+# import sys
+# import os
 
 #print('Hello World!')
 
@@ -185,3 +185,19 @@ else : print('yeah')
 
 #Loops
 # https://youtu.be/N4mEzFDjqtA?t=1184
+
+
+class Human():
+    name = None
+    age = None
+    
+    def __init__(self, name, age):
+        Human.name = name
+        Human.age = age
+
+    def __str__(self):
+        return '{} {}'.format(Human.name, Human.age)
+
+h = Human(name='Vasya', age=32)
+
+print(h)
