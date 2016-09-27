@@ -1,0 +1,13 @@
+<h1>Music App Page</h1>
+
+{% if albums %}
+    <ul>
+        {% for album in albums %}
+            <li>
+                <a href="/music/{{ album.id }}/">{{ album.album_title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>No albums!</h3>
+{% endif %}
