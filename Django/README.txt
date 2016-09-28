@@ -1,4 +1,4 @@
-CURRENT VIDEO - https://www.youtube.com/watch?v=TnU_I8DKKYQ&index=17&list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK
+CURRENT VIDEO - https://www.youtube.com/watch?v=wDuqObGbLnI&index=22&list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK
 
 #Server
 python manage.py runserver - starts local server

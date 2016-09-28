@@ -1,10 +1,16 @@
 <h1>Music App Page</h1>
 
+{# https://docs.djangoproject.com/es/1.10/ref/templates/builtins/ #}
+
 {% if albums %}
+    <h3>Here are all Albums:</h3>
     <ul>
         {% for album in albums %}
             <li>
-                <a href="/music/{{ album.id }}/">{{ album.album_title }}</a>
+                <a href="{% url 'music:detail' album.id %}">{{ album.album_title }}</a>
+                {# same as: /music/{{ album.id }}/ #}
+                {# url - special thing that gets current url for 'detail' url template and adds album.id to it #}
+                {# music:detail - means that we ary trying to get detail url from music app #}
             </li>
         {% endfor %}
     </ul>
