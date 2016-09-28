@@ -2,18 +2,15 @@
 
 {# https://docs.djangoproject.com/es/1.10/ref/templates/builtins/ #}
 
-{% if albums %}
+{% if all_albums %}
     <h3>Here are all Albums:</h3>
     <ul>
-        {% for album in albums %}
+        {% for album in all_albums %}
             <li>
                 <a href="{% url 'music:detail' album.id %}">{{ album.album_title }}</a>
-                {# same as: /music/{{ album.id }}/ #}
-                {# url - special thing that gets current url for 'detail' url template and adds album.id to it #}
-                {# music:detail - means that we ary trying to get detail url from music app #}
             </li>
         {% endfor %}
-    </ul>
+        </ul>
 {% else %}
     <h3>No albums!</h3>
 {% endif %}

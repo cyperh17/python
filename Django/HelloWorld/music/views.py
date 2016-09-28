@@ -10,7 +10,7 @@ from music.models import Album, Song
 
 def index(request):
     albums = Album.objects.all() # all data
-    return render(request, 'music/index.html', { 'albums': albums })
+    return render(request, 'music/index.html', { 'all_albums': albums })
     
 
 def detail(request, album_id):
@@ -22,3 +22,19 @@ def detail(request, album_id):
     album = get_object_or_404(Album, pk=album_id)
 
     return render(request, 'music/detail.html', { 'album': album })
+
+def favorite(request, album_id):
+    album = get_object_or_404(Album, pk=album_id)
+    selected_song_id = request.POST['song']
+
+    try:
+        song_db = album.song_set.get(pk=selected_song_id)
+    except (KeyError, Song.DoesNotExist):
+        return render(request, 'music/detail.html', {
+            'album': album,
+            'error_message': 'You did not selec a valid song'
+        })
+    else:
+        song_db.is_favorite = True
+        song_db.save()
+        return render(request, 'music/detail.html', { 'album': album })

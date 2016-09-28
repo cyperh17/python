@@ -1,10 +1,11 @@
-CURRENT VIDEO - https://www.youtube.com/watch?v=wDuqObGbLnI&index=22&list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK
+CURRENT VIDEO - https://www.youtube.com/watch?v=Dv15y5CgCyE&index=25&list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK
 
 #Server
 python manage.py runserver - starts local server
 
 #DataBase
 python manage.py makemigrations - creates migrations
+python manage.py makemigrations [appname] - creates migrations for [appname]
 python manage.py migrations - apply migrations to DB
 python manage.py createsuperuser - create and admin user for DB
 python manage.py sqlmigrate [appname] [migrationcode] - gets information about migration code specified from the app specified
